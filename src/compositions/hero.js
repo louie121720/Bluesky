@@ -88,39 +88,51 @@ const Hero = () => (
               </Box>
             </Stack>
 
-            <Delayed delay={0.4}>
-              <Stack direction={{ base: 'column', xl: 'row' }} pt={5}>
-                <Button
-                  variant="bluesky"
-                  bg="orange"
-                  fontSize={{ base: 18, md: 24 }}
-                  px={[6, 8]}
-                  w={['100%', 'fit-content']}
-                  maxW={{ base: 250, md: 320 }}
-                >
-                  START YOUR DESIGN
-                </Button>
+            <Stack direction={{ base: 'column', xl: 'row' }} pt={5}>
+              <Delayed
+                whileHover={{ scale: 0.9, transition: { duration: 0.2 } }}
+                whileTap={{ scale: 0.8 }}
+              >
+                <a>
+                  <Button
+                    variant="bluesky"
+                    bg="orange"
+                    fontSize={{ base: 18, md: 24 }}
+                    px={[6, 8]}
+                    w={['100%', 'fit-content']}
+                    maxW={{ base: 250, md: 320 }}
+                  >
+                    START YOUR DESIGN
+                  </Button>
+                </a>
+              </Delayed>
 
-                <Button
-                  variant="bluesky"
-                  rightIcon={
-                    <Image
-                      w={34}
-                      mt={-1}
-                      ml={[0, 7]}
-                      src="images/calendar-icon.png"
-                    />
-                  }
-                  bg="yellow"
-                  fontSize={{ base: 18, md: 24 }}
-                  pl={[4, 8]}
-                  w={['100%', 'fit-content']}
-                  maxW={{ base: 250, md: 320 }}
-                >
-                  SCHEDULE A CALL
-                </Button>
-              </Stack>
-            </Delayed>
+              <Delayed
+                whileHover={{ scale: 0.9, transition: { duration: 0.2 } }}
+                whileTap={{ scale: 0.8 }}
+              >
+                <a href="https://calendly.com/blueskypr/" target="_blank">
+                  <Button
+                    variant="bluesky"
+                    rightIcon={
+                      <Image
+                        w={34}
+                        mt={-1}
+                        ml={[0, 7]}
+                        src="images/calendar-icon.png"
+                      />
+                    }
+                    bg="yellow"
+                    fontSize={{ base: 18, md: 24 }}
+                    pl={[4, 8]}
+                    w={['100%', 'fit-content']}
+                    maxW={{ base: 250, md: 320 }}
+                  >
+                    SCHEDULE A CALL
+                  </Button>
+                </a>
+              </Delayed>
+            </Stack>
           </Stack>
 
           <Box
