@@ -8,7 +8,7 @@ const Fonts = () => (
       /* Safari compatibility */
       overflow-x: hidden;
       height: 100%;
-      width: 100%;
+      width: 100vw;
       transform: translate3d(0,0,0);
     }
 
