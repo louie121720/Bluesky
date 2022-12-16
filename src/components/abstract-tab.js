@@ -35,8 +35,8 @@ const AbstractTab = ({ title, index }) => {
     (isOdd ? ((index - 1) / 2) % 2 : (index / 2) % 2) ? 'blue' : 'purple'
   const boxSize = color === 'blue' ? [15, 30] : [10, 20]
   const flexDirection = index % 2 ? 'row-reverse' : 'row'
-  const ml = index % 2 ? boxSize.map(n => -(n/2)) : null
-  const mr = index % 2 ? null : boxSize.map(n => -(n/2))
+  const ml = index % 2 ? boxSize.map(n => -(n / 2)) : null
+  const mr = index % 2 ? null : boxSize.map(n => -(n / 2))
 
   const stickLengthList = [
     '60%',

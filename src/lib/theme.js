@@ -28,7 +28,7 @@ const components = {
         borderRadius: 10,
         overflow: 'hidden',
         _hover: {
-          opacity: 1
+          opacity: 0.9
         }
       }
     }

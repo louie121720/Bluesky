@@ -24,6 +24,7 @@ const App = () => (
     <WorkWithTheBest />
     <ViewWorks />
     <Box
+      overflow="hidden"
       position="relative"
       zIndex={-1}
       bgImage="url(images/background-asset-02.png)"

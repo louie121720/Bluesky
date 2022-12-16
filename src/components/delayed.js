@@ -31,9 +31,12 @@ const Delayed = ({
   children,
   onView,
   hoverable,
-  style
+  style,
+  whileHover,
+  whileTap
 }) => {
   const animate = { x: 0, y: 0, opacity: 1 }
+  const defaultTransition = { duration: 0.2, delay: 0 }
   const transition = { duration: 0.8, delay: delay || 0 }
   const animateProps = onView
     ? { whileInView: { ...animate, transition } }
@@ -45,7 +48,14 @@ const Delayed = ({
       initial={{ ...getDirection(from), opacity: fromOpaque ? 0 : 1 }}
       {...animateProps}
       exit={{ ...getDirection(from), opacity: 0 }}
-      whileHover={{ y: hoverable ? -20 : 0 }}
+      whileHover={
+        whileHover
+          ? { ...whileHover, transition: defaultTransition }
+          : { y: hoverable ? -20 : 0 }
+      }
+      whileTap={
+        whileTap ? { ...whileTap, transition: defaultTransition } : null
+      }
       viewport={{ once: true, amount: 0.8 }}
       style={style}
     >
